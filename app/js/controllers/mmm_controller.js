@@ -3,9 +3,21 @@
 module.exports = function(app) {
   app.controller('mmmCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.hidemmm = true;
+    $scope.index = function() {
+      $http({
+        method: 'GET',
+        url: '/api/mmmCalc'
+      })
+      .success(function(data) {
+        $scope.mmm = data;
+      })
+      .error(function(data) {
+        console.log(data);
+      });
+    };
+
     $scope.collectNums = function() {
       var givenNums = $scope.mmm.nums.split(' ');
-      console.log(givenNums);
 
       $http({
         method: 'POST',

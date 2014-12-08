@@ -1,8 +1,8 @@
 'use strict';
 
 var express = require('express');
-var app = express();
 var bodyparser = require('body-parser');
+var app = express();
 
 app.use(bodyparser.json());
 app.use(express.static(__dirname + '/build'));
