@@ -48,7 +48,7 @@ module.exports = function(app) {
               maxCount = modeObj[el];
             }
           }
-          return maxEl;
+          return parseInt(maxEl);
         }
       };
     };

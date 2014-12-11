@@ -1,23 +1,22 @@
 'use strict';
 
 require('angular/angular');
-// require('angular-route');
 
-var mmmApp = angular.module('mmmApp', ['ngRoute']);
+var mmmApp = angular.module('mmmApp', []);
 
 //services
-require('./services/mmm_service')(mmmApp);
+require('./services/mmm_service.js')(mmmApp);
 
 //controllers
 require('./controllers/mmm_controller.js')(mmmApp);
 
-mmmApp.config(['$routeProvider', function($routeProvider) {
-  $routeProvider
-  .when('/api/mmmCalc', {
-    templateUrl: 'templates/mmm/mmm_template.html',
-    controller: 'mmmCtrl'
-  })
-  .otherwise({
-    redirectTo: '/api/mmmCalc'
-  });
-}]);
+// mmmApp.config(['$routeProvider', function($routeProvider) {
+//   $routeProvider
+//   .when('/api/mmmCalc', {
+//     templateUrl: '../templates/mmm/mmm_template.html',
+//     controller: 'mmmCtrl'
+//   })
+//   .otherwise({
+//     redirectTo: '/api/mmmCalc'
+//   });
+// }]);
