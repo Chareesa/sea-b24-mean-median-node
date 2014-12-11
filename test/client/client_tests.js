@@ -33,7 +33,6 @@ describe('MMMController', function() {
 
     it('should make a call to mmm', function() {
       $httpBackend.expectPOST('/api/mmmCalc').respond(200, {mean: 7.5, median: 7.5, mode: 5});
-      console.log('THIS IS SCOPE 1: ' + $scope.mmmCalc);
       $scope.mmm = {};
       $scope.mmm.nums = '5 6 7 8 9 10';
       $scope.collectNums();

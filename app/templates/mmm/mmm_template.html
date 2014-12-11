@@ -1,0 +1,12 @@
+<div data-ng-controller='mmmCtrl' data-ng-init='index()'>
+  <label>Enter Numbers:</label></br>
+  <input type='text' data-ng-model='mmm.nums'/>
+  <button data-ng-click='collectNums()'>Calculate</button>
+  </br>
+  </br>
+  <div data-ng-hide='hidemmm'>
+    <p> Mean: {{mmm.mean}} </p>
+    <p> Median: {{mmm.median}} </p>
+    <p> Mode: {{mmm.mode}} </p>
+  </div>
+</div>
